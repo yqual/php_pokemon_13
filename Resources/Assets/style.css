@@ -1,0 +1,13 @@
+section{
+    border-bottom: 1px solid #000;
+    margin-bottom: 24px;
+}
+pre{
+    background-color: black;
+    color: lime;
+    padding: 1rem;
+}
+.result-box{
+    height: 240px;
+    overflow-y: scroll;
+}
