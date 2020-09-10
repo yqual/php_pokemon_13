@@ -13,6 +13,7 @@ $action_path = '/';
     <meta charset="utf-8">
     <title>PHPポケモン</title>
     <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="Resources/Assets/style.css">
 </head>
@@ -55,7 +56,7 @@ $action_path = '/';
             <?php endif; ?>
             <section>
                 <div class="row">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-sm-6 mb-5">
                         <h2 class="mb-3">メソッドの実行</h2>
                         <?php if(is_object($controller->pokemon ?? null)): ?>
                             <?php $_SESSION['pokemon'] = $controller->pokemon; # ポケモンのインスタンスをセッションに格納 ?>
@@ -71,7 +72,7 @@ $action_path = '/';
                             <?php include('Resources/Partials/Forms/select_pokemon.php'); ?>
                         <?php endif; ?>
                     </div>
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-sm-6 mb-5">
                         <h2 class="mb-3">実行結果</h2>
                         <div class="result-box border p-3 mb-3">
                             <?php foreach($controller->getMessages() as list($msg, $status)): ?>
